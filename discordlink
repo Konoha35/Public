@@ -1,0 +1,20 @@
+local StarterGui = game:GetService("StarterGui")
+
+local bindable = Instance.new("BindableFunction")
+function bindable.OnInvoke()
+            setclipboard("https://discord.gg/uCEdHsURFq")
+    StarterGui:SetCore("SendNotification", {
+    Title = "SokuriHub",
+    Text = "Link copied to clipboard!",
+    Duration = 10,
+})
+
+end
+
+StarterGui:SetCore("SendNotification", {
+    Title = "SokuriHub",
+    Text = "Join our Discord to get the script!",
+    Duration = 999,
+    Button1 = "Copy Link",
+    Callback = bindable
+})
